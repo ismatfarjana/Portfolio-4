@@ -5,17 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Syeda's portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <section class="container">
       <section class="nav-wrapper">
           <section class="left-side">
-              <section class="nav-link-wrapper">
-                  <a href="index.html" target="_blank">Home</a>
+              <section class="nav-link-wrapper active-nav-link">
+                  <a href="index.html" >Home</a>
               </section>
               <section class="nav-link-wrapper">
-                  <a href="about.html" target="_blank">About</a>
+                  <a href="about.html" >About</a>
               </section>
           </section> 
 
@@ -25,7 +26,95 @@
               </section>
           </section>
       </section> 
+
+      <section class="content-wrapper">
+          <section class="portfolio-items-wrapper">
+
+                <section class="portfolio-item-wrapper">
+                    <section class="portfolio-img-background" style="background-image:url(img/portfolio2.jpg)"></section>
+
+                    <section class="img-text-wrapper">
+                        <section class="logo-wrapper">
+                          <img src="img/tic-tac-toe.png">
+                        </section>
+
+                        <section class="subtitle">
+                            I built this Tic-Tac-Toe terminal app for assessment.
+                        </section>
+                    </section>
+                </section>
+
+
+                <section class="portfolio-item-wrapper">
+                    <section class="portfolio-img-background" style="background-image:url(img/portfolio3.jpg)"></section>
+
+                    <section class="img-text-wrapper">
+                        <section class="logo-wrapper">
+                          <img src="img/calculator.png">
+                        </section>
+
+                        <section class="subtitle">
+                            I built this Bafefoot calculator terminal app inspired by the book "The barefoot investor" Scott Pape..
+                        </section>
+                    </section>
+                </section>
+
+
+
+                <section class="portfolio-item-wrapper">
+                    <section class="portfolio-img-background" style="background-image:url(img/portfolio1.jpg)"></section>
+
+                    <section class="img-text-wrapper">
+                        <section class="logo-wrapper">
+                          <img src="img/bmi.png">
+                        </section>
+
+                        <section class="subtitle">
+                            I built this BMI terminal app to determine whether you are in a healthy weight range for your height.
+                        </section>
+                    </section>
+                </section>
+
+
+
+                <section class="portfolio-item-wrapper">
+                    <section class="portfolio-img-background" style="background-image:url(img/portfolio4.jpg)"></section>
+
+                    <section class="img-text-wrapper">
+                        <section class="logo-wrapper">
+                          <img src="img/social-media.png">
+                        </section>
+
+                        <section class="subtitle">
+                            I built this React social media card app for learning purpose.
+                        </section>
+                    </section>
+                </section>
+
+
+
+          </section>
+      </section>
+
   </section>
     
 </body>
-</html>
+
+<script>
+    const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper')
+
+    portfolioItems.forEach(portfolioItem => {
+        portfolioItem.addEventListener('mouseover', () => {
+            // console.log(portfolioItem.childNodes[1].classList);
+            portfolioItem.childNodes[1].classList.add('img-darken');
+        })
+
+        portfolioItem.addEventListener('mouseout', () => {
+            // console.log(portfolioItem.childNodes[1].classList);
+            portfolioItem.childNodes[1].classList.remove('img-darken');
+        })
+       
+    })
+</script>
+
+</html> 
